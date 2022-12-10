@@ -33,9 +33,9 @@ import java.util.ArrayList;
  *
  * @author drist
  */
-public class AnEcoSystem extends Organizations{
+public class EcoSystem extends Organizations{
      
-    private static AnEcoSystem business;
+    private static EcoSystem business;
     
        private RequestorDirectory reqDir;
     private DonorDirectory donDir;
@@ -49,16 +49,16 @@ public class AnEcoSystem extends Organizations{
     private ReqorderDirectory reqorderDir;
     private VolRequestsDirectory vrDir;
     
-    public static AnEcoSystem getBusiness() {
+    public static EcoSystem getBusiness() {
         return business;
     }
     
-        public static void setBusiness(AnEcoSystem business) {
-        AnEcoSystem.business = business;
+        public static void setBusiness(EcoSystem business) {
+        EcoSystem.business = business;
     }
         
      // to add ngo directory
-    public AnEcoSystem(RequestorDirectory reqDir, DonorDirectory donDir, FCWarehouseDirectory fcwDir, NGODirectory ngoDir, VolunteerDirectory volDir,
+    public EcoSystem(RequestorDirectory reqDir, DonorDirectory donDir, FCWarehouseDirectory fcwDir, NGODirectory ngoDir, VolunteerDirectory volDir,
                     FCPantryDirectory fcpDir, FCPantryItemsDirectory fcpiDir, DonationDirectory donatDir, ReqorderDirectory reqorderDir,
                     VolRequestsDirectory vrDir) {
 
@@ -131,7 +131,7 @@ public class AnEcoSystem extends Organizations{
         roleList.add(new DeliveryVolunteer());
         return roleList;
     }
-    private AnEcoSystem(){
+    private EcoSystem(){
         super("Food Cloud");
          this.reqDir =  new RequestorDirectory();
         this.donDir = new DonorDirectory();
