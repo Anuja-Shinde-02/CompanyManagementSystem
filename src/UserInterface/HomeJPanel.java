@@ -2,26 +2,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package UserInterface;
+package userinterface;
 
 import java.awt.Dimension;
-import java.awt.Image;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import java.awt.Image;
 
 /**
  *
- * @author drist
+ * @author dristidani
  */
 public class HomeJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form HomeJPanel
      */
-    
-      JPanel userProcessContainer;
+    JPanel userProcessContainer;
     public HomeJPanel(JPanel userProcessContainer) throws IOException {
         initComponents();
         this.userProcessContainer = userProcessContainer;
@@ -36,10 +35,6 @@ public class HomeJPanel extends javax.swing.JPanel {
         imageLbl.setIcon(new ImageIcon(newimg));
         
     }
-    
-    public HomeJPanel() {
-        initComponents();
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -50,21 +45,17 @@ public class HomeJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        imageLbl = new javax.swing.JLabel();
+
+        setPreferredSize(new java.awt.Dimension(1100, 900));
+        setLayout(new java.awt.CardLayout());
+
+        imageLbl.setPreferredSize(new java.awt.Dimension(333, 400));
+        add(imageLbl, "card2");
     }// </editor-fold>//GEN-END:initComponents
 
-    // Variables declaration - do not modify                     
-    private javax.swing.JLabel imageLbl;
-    // End of variables declaration   
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel imageLbl;
     // End of variables declaration//GEN-END:variables
 }

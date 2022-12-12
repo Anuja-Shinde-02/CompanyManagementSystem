@@ -8,12 +8,12 @@ import java.util.ArrayList;
 
 /**
  *
- * @author drist
+ * @author dristidani
  */
 public class DonationDirectory {
- 
-     public ArrayList<Donation> donatList = new ArrayList<Donation>();;
+    public ArrayList<Donation> donatList = new ArrayList<Donation>();;
     
+    //DonationDirectory
     public DonationDirectory(){
         donatList = new ArrayList();
     }
@@ -22,14 +22,18 @@ public class DonationDirectory {
         return donatList;
     }
 
+    //donation list
     public void setDonatList(ArrayList<Donation> donatList) {
         this.donatList = donatList;
     }
-     public void addNewDonation(Donation dt){
-        donatList.add(dt);
-    }
+    
+    //delete donation
     public void deleteDonation(Donation selectedD){
         donatList.remove(selectedD);
     }
     
+    //add donation
+    public void addNewDonation(Donation dt){
+        donatList.add(dt);
+    }
 }

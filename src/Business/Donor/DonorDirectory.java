@@ -4,15 +4,16 @@
  */
 package Business.Donor;
 
-import Business.Requestor.Requestor;
 import java.util.ArrayList;
+import Business.Requestor.Requestor;
+
 
 /**
  *
- * @author drist
+ * @author dristidani
  */
 public class DonorDirectory {
-    
+    //ArrayList
     private ArrayList<Donor> donorList;
     
     public DonorDirectory(){
@@ -23,22 +24,27 @@ public class DonorDirectory {
         return donorList;
     }
 
+    //getter and setter
     public void setDonorList(ArrayList<Donor> donorList) {
         this.donorList = donorList;
     }
     
+    //add donor
     public void addDonDir(Donor dd) {
         donorList.add(dd);
     }
     
+    //remove donor
     public void removeDonor(Donor d) {
         this.donorList.remove(d);
     }
 
+    //remove donor by index
     public void removeDonByIndex(int index) {
         donorList.remove(index);
     }
 
+    //getter and setter
     public Donor getDonorDetailsByIndex(int index) {
         return donorList.get(index);
     }
@@ -57,5 +63,4 @@ public class DonorDirectory {
         }
         return null;
     }
-    
 }
